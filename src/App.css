@@ -7,11 +7,12 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   .App {
     border: red 5px solid;
   }
-}
+}*/
+
 
 .userlist {
   flex: 1;
@@ -21,6 +22,8 @@
 .chat {
   flex: 12;
   background-color: silver;
+  background-image: url(/public/owl.png);
+  background-size: contain;
 }
 
 .inputbox {
