@@ -27,11 +27,12 @@ function Chatline(props) {
         .then(data => setElement(data.gender));
     }
     else if (text.startsWith("/randomfact")) {
-      // ex10-01 here: Implement randomfact using fetch & promise
-      // https://uselessfacts.jsph.pl/random.json?language=en
-
+      fetch("https://uselessfacts.jsph.pl/random.json?language=en ")
+        .then(res => res.json())
+        .then(data => setElement(data.text||"c"));
     }
   };
+  
 
   useEffect(() => {
     transform(text);
@@ -42,4 +43,4 @@ function Chatline(props) {
   )
 }
 
-export default Chatline;
+export default Chatline ;
